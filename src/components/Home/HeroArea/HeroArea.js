@@ -19,7 +19,7 @@ const HeroArea = () => {
   }, []);
 
   return (
-    <Box>
+    <Box sx={{mt:3}}>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

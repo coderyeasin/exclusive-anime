@@ -5,11 +5,12 @@ import Navbar from './Navbar/Navbar';
 
 const Home = () => {
     return (
-        <div>
-            <HeroArea />
-            {/* <Navbar /> */}
-            {/* <Anime /> */}
-        </div>
+      <div>
+        <Navbar />
+        <HeroArea />
+
+        {/* <Anime /> */}
+      </div>
     );
 };
 
