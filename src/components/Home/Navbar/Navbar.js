@@ -6,13 +6,14 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { InputBase } from "@mui/material";
 
 const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor:"springgreen"}}>
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -20,10 +21,15 @@ const Navbar = () => {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             E-Anime
           </Typography>
+          <InputBase
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="Search Favourite Films"
+            inputProps={{ "aria-label": "search google maps" }}
+          />
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
