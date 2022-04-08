@@ -14,12 +14,12 @@ const HeroArea = () => {
     fetch("https://ghibliapi.herokuapp.com/films")
       .then((res) => res.json())
       .then((data) => {
-        setAnime(data.slice(0,9));
+        setAnime(data.slice(0,9).reverse());
       });
   }, []);
 
   return (
-    <Box sx={{mt:3}}>
+    <Box >
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -39,8 +39,8 @@ const HeroArea = () => {
         style={{  width: "100%" }}
       >
         {anime.map((movie) => (
-          <SwiperSlide>
-            <MovieCard key={movie.id} movie={movie} />
+          <SwiperSlide >
+            <MovieCard key={movie._id} movie={movie} />
           </SwiperSlide>
         ))}
       </Swiper>
