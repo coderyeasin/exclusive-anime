@@ -7,12 +7,12 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ButtonBase, InputBase } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Search } from "@mui/icons-material";
 
 const Navbar = () => {
   return (
-    <Box sx={{ flexGrow: 1, }}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "#062C30" }}>
         <Toolbar>
           {/* <IconButton
@@ -25,12 +25,19 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton> */}
 
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Ex-Anime
-          </Typography>
+          <Link to="/home" style={{flex:1, textDecoration:'none', color:'whitesmoke'}}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Ex-Anime
+            </Typography>
+          </Link>
           <Box sx={{ position: "relative" }}>
             <InputBase
-              sx={{ flex: 1, color: "whitesmoke", marginLeft: "24px", position: "relative" }}
+              sx={{
+                flex: 1,
+                color: "whitesmoke",
+                marginLeft: "24px",
+                position: "relative",
+              }}
               placeholder="Search Favourite Films"
               inputProps={{ "aria-label": "search google maps" }}
             />

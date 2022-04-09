@@ -21,7 +21,7 @@ const Film = ( props ) => {
         }}
       >
         <Link
-          to={`anime/${props.film.id}`}
+          to={`/anime/${props.film.id}`}
           style={{ textDecoration: "none", color: "#05595B" }}
         >
           <CardMedia
