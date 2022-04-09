@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Film = ( props ) => {
     
@@ -16,62 +17,68 @@ const Film = ( props ) => {
         sx={{
           position: "relative",
           borderRadius: "10px",
+          cursor: "pointer",
         }}
       >
-        <CardMedia
-          component="img"
-          style={{
-            height: "300px",
-          }}
-          image={image}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
+        <Link
+          to={`anime/${props.film.id}`}
+          style={{ textDecoration: "none", color: "#05595B" }}
+        >
+          <CardMedia
+            component="img"
+            style={{
+              height: "300px",
             }}
-          >
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Release Date: {release_date}
-            </Typography>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Running Time: {running_time} mins
-            </Typography>
-            <Typography
+            image={image}
+            alt="green iguana"
+          />
+          <CardContent>
+            <Box
               sx={{
-                fontSize: 18,
-                position: "absolute",
-                top: "0",
-                right: "0",
-                border: "5px solid #062C30",
-                borderRadius: "50%",
-                marginRight: "10px",
-                marginTop: "10px",
-                paddingX: "5px",
-                color: "#E2D784",
-                background: "#05595B",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
               }}
-              color="text.secondary"
-              gutterBottom
             >
-              {rt_score}
+              <Typography
+                sx={{ fontSize: 14, textDecoration: "none" }}
+                color="text.secondary"
+                gutterBottom
+              >
+                Release Date: {release_date}
+              </Typography>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                Running Time: {running_time} mins
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: 18,
+                  position: "absolute",
+                  top: "0",
+                  right: "0",
+                  border: "5px solid #062C30",
+                  borderRadius: "50%",
+                  marginRight: "10px",
+                  marginTop: "10px",
+                  paddingX: "5px",
+                  color: "#E2D784",
+                  background: "#05595B",
+                  textDecoration: "none",
+                }}
+                gutterBottom
+              >
+                {rt_score}
+              </Typography>
+            </Box>
+            <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
+              {title}
             </Typography>
-          </Box>
-          <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
-            {title}
-          </Typography>
-        </CardContent>
+          </CardContent>
+        </Link>
       </Card>
     </Grid>
   );
