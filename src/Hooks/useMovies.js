@@ -18,7 +18,7 @@ const useMovies = () => {
         setMovies(data.reverse());
         setLoading(false);
       });
-  }, [movies, anime]);
+  }, []);
 
       useEffect(() => {
         fetch("https://ghibliapi.herokuapp.com/people/")

@@ -146,6 +146,7 @@ const ExploreAnime = () => {
                 >
                   {location.map((e) => (
                     <Paper
+                      key={e.id}
                       elevation={3}
                       style={{
                         width: "220px",
@@ -201,6 +202,7 @@ const ExploreAnime = () => {
                 >
                   {peoples.map((e) => (
                     <Paper
+                      key={e.id}
                       elevation={3}
                       style={{
                         width: "220px",
@@ -239,6 +241,7 @@ const ExploreAnime = () => {
                 >
                   {specie.map((e) => (
                     <Paper
+                      key={e.id}
                       elevation={3}
                       style={{
                         width: "220px",
@@ -276,6 +279,7 @@ const ExploreAnime = () => {
                 >
                   {vehicle.map((e) => (
                     <Paper
+                      key={e.id}
                       elevation={3}
                       style={{
                         width: "220px",
