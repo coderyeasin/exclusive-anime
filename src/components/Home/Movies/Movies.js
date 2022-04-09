@@ -6,13 +6,19 @@ import Film from './Film/Film';
 const Movies = () => {
     const { movies } = useMovies();
     return (
-      <Box sx={{ flexGrow: 1, px:5 }} >
+      <Box sx={{ flexGrow: 1, px: 5 }}>
         <Typography
           sx={{
             fontWeight: 500,
-            my: 5,fontSize:'28px',
+            my: 5,
+            fontSize: "28px",
             textTransform: "uppercase",
-            color: "success.main",
+            color: "#05595B",
+            background: "#E2D784",
+            width: "300px",
+            textAlign: "center",
+            borderTopLeftRadius: "20px",
+            borderBottomRightRadius: "20px",
           }}
           variant="h6"
           component="div"
@@ -21,16 +27,15 @@ const Movies = () => {
           Feature Movies
         </Typography>
 
-          <Grid
-            container
-            spacing={{ xs: 2, md: 3 }}
-            columns={{ xs: 4, sm: 8, md: 12 }}
-          >
-            {movies.map((film) => (
-              <Film key={film.id} film={film} />
-            ))}
-          </Grid>
-
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+        >
+          {movies.map((film) => (
+            <Film key={film.id} film={film} />
+          ))}
+        </Grid>
       </Box>
     );
 };
