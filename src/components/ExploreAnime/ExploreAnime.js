@@ -189,7 +189,16 @@ const ExploreAnime = () => {
                 <Typography variant="body1" gutterBottom>
                   <strong>Summary :</strong> {description}
                 </Typography>
-                <Typography variant="subtitle1" gutterBottom component="div">
+                <Typography
+                  variant="subtitle1"
+                  gutterBottom
+                  component="div"
+                  style={{
+                    fontSize: "18px",
+                    textTransform: "uppercase",
+                    color: "#05595B",
+                  }}
+                >
                   <strong>Peoples :</strong>
                 </Typography>
                 <Box
@@ -228,7 +237,16 @@ const ExploreAnime = () => {
                   ))}
                 </Box>
 
-                <Typography variant="subtitle1" gutterBottom component="div">
+                <Typography
+                  variant="subtitle1"
+                  gutterBottom
+                  component="div"
+                  style={{
+                    fontSize: "18px",
+                    textTransform: "uppercase",
+                    color: "#05595B",
+                  }}
+                >
                   <strong>Species :</strong>
                 </Typography>
                 <Box
@@ -266,7 +284,16 @@ const ExploreAnime = () => {
                     </Paper>
                   ))}
                 </Box>
-                <Typography variant="subtitle1" gutterBottom component="div">
+                <Typography
+                  variant="subtitle1"
+                  gutterBottom
+                  component="div"
+                  style={{
+                    fontSize: "18px",
+                    textTransform: "uppercase",
+                    color: "#05595B",
+                  }}
+                >
                   <strong>Vehicles :</strong>
                 </Typography>
                 <Box
