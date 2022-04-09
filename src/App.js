@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ExploreAnime from "./components/ExploreAnime/ExploreAnime";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/Home/Home";
 import Navbar from "./components/Home/Navbar/Navbar";
 
 

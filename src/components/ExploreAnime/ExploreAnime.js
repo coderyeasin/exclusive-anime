@@ -66,7 +66,9 @@ const ExploreAnime = () => {
               right: 0,
               bottom: 0,
               background: "rgba(223, 231, 232, 0.718)",
-              padding: "10px", borderTopRightRadius:'10px', borderTopLeftRadius:'10px'
+              padding: "10px",
+              borderTopRightRadius: "10px",
+              borderTopLeftRadius: "10px",
             }}
           >
             <Grid container spacing={2}>
