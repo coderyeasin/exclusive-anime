@@ -13,7 +13,7 @@ const HeroArea = () => {
 const{anime} = useMovies()
 
   return (
-    <Box >
+    <Box>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -30,11 +30,11 @@ const{anime} = useMovies()
         pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
-        style={{  width: "100%" }}
+        style={{ width: "100%" }}
       >
         {anime.map((movie) => (
-          <SwiperSlide >
-            <MovieCard key={movie._id} movie={movie} />
+          <SwiperSlide key={movie.id}>
+            <MovieCard movie={movie} />
           </SwiperSlide>
         ))}
       </Swiper>

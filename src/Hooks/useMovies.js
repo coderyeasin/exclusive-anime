@@ -18,7 +18,7 @@ const useMovies = () => {
         setMovies(data.reverse());
         setLoading(false);
       });
-  }, []);
+  }, [movies, anime]);
 
       useEffect(() => {
         fetch("https://ghibliapi.herokuapp.com/people/")
@@ -52,10 +52,6 @@ const useMovies = () => {
           });
       }, []);
 
-  console.log(peoples)
-  console.log(location);
-  console.log(specie);
-  console.log(vehicle);
   return { anime, movies, peoples, location, specie, vehicle, loading };
 };
 
