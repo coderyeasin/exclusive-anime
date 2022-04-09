@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Box } from "@mui/material";
 import MovieCard from "./MovieCard/MovieCard";
 import { Swiper, SwiperSlide } from "swiper/react";
