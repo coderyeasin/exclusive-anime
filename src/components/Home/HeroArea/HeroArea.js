@@ -6,17 +6,11 @@ import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import useMovies from "../../../Hooks/useMovies";
 
 
 const HeroArea = () => {
-  const [anime, setAnime] = useState([]);
-  useEffect(() => {
-    fetch("https://ghibliapi.herokuapp.com/films")
-      .then((res) => res.json())
-      .then((data) => {
-        setAnime(data.slice(0,9).reverse());
-      });
-  }, []);
+const{anime} = useMovies()
 
   return (
     <Box >

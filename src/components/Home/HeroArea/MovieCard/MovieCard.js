@@ -10,11 +10,16 @@ import { PlayCircleFilled} from '@mui/icons-material';
 import './MovieCard.css'
 
 const MovieCard = ({ movie }) => {
-  const { title, image, description } = movie;
+  const { image, title } = movie;
   return (
-    <Box sx={{ position: "relative", maxHeight: "500px" }}>
-      <Card sx={{ borderRadius: "10px", height:'100%' }}>
-        <CardMedia component="img" image={image} alt="green iguana" />
+    <Box sx={{ position: "relative" }}>
+      <Card sx={{ borderRadius: "10px" }}>
+        <CardMedia
+          component="img"
+          image={image}
+          sx={{ width: "100%", height: "300px", margin: "0 auto" }}
+          alt="green iguana"
+        />
         <CardContent sx={{ position: "absolute", top: "0", width: "100%" }}>
           <Typography
             gutterBottom
@@ -33,6 +38,23 @@ const MovieCard = ({ movie }) => {
           >
             New
           </Typography>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            style={{
+              color: "#05595B",
+              fontWeight: "bold",
+              fontSize: "18px",
+              background: "#E2D784",
+              width: "200px",
+              textAlign: "center",
+              borderTopLeftRadius: "20px",
+              borderBottomRightRadius: "20px",
+            }}
+          >
+            {title}
+          </Typography>
         </CardContent>
         <PlayCircleFilled
           className="playButton"
@@ -46,7 +68,7 @@ const MovieCard = ({ movie }) => {
             right: "0",
             left: "0",
             bottom: "0",
-             transition: '0.3s'
+            transition: "0.3s",
           }}
         />
       </Card>
